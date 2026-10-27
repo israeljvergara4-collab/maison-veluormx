@@ -1,0 +1,17 @@
+{
+  "name": "maison-velour",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio estático de Maison Velour (build comprimido, sin source maps).",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:strict": "node scripts/build.mjs --strict",
+    "preview": "npx --yes serve dist -l 4173",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

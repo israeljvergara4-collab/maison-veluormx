@@ -1,0 +1,9 @@
+project_id = "maison-velour"
+
+[auth]
+# La tienda no tiene cuentas de clientes: nadie debe poder registrarse.
+enable_signup = false
+
+[functions.create-order]
+# Endpoint público (lo llama el sitio). Se protege con CORS, Turnstile y validación estricta.
+verify_jwt = false
